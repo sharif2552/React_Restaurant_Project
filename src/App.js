@@ -5,12 +5,14 @@ import About from './components/About/About';
 import Menu from './components/Menu/Menu';
 import Contact from './components/Contact/Contact';
 import './App.css';
+import Navbar from './components/Menu/Navbar';
 
 
 function App() {
   return (
-    <div className="my-class">
-    <Router>
+    <div>
+<Router>
+      <Navbar  />
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,7 +21,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
+
     </div>
+    
   );
 }
 
