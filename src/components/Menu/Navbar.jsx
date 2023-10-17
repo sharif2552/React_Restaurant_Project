@@ -1,24 +1,21 @@
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 
 function Navbar() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <IconButton edge="start" color="inherit" aria-label="menu">
-          {/* You can place a menu icon or any other icon here */}
-        </IconButton>
         <Typography variant="h6" style={{ flexGrow: 1 }}>
           My App
         </Typography>
-        <Button color="inherit">Home</Button>
-        <Button color="inherit">About</Button>
-        <Button color="inherit">Services</Button>
-        <Button color="inherit">Contact</Button>
+        <Button color="inherit" component={Link} to="/">Home</Button>
+        <Button color="inherit" component={Link} to="/about">About</Button>
+        <Button color="inherit" component={Link} to="/menu">Menu</Button>
+        <Button color="inherit" component={Link} to="/contact">Contact</Button>
       </Toolbar>
     </AppBar>
   );
